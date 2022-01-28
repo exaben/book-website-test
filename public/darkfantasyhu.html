@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Dark Fantasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <meta name="description" content="Vaják - The Witcher - Viharidő, Keserű ébredés - Tündérkrónikák, Legendary, Crescent City - Föld és vér háza">
+</head>
+<body>
+<nav
+        class="flex items-center justify-between flex-wrap bg-orange-800 py-4 lg:px-12 shadow border-solid border-t-2 border-orange-900">
+    <div class="flex justify-center h-32 lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+        <div class=" pr-8">
+            <div x-data="{ dropdownOpen: false }" class="relative my-12">
+                <button @click="dropdownOpen = !dropdownOpen"
+                        class=" z-10 block rounded-md bg-white p-2 focus:outline-none hover:bg-orange-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute mt-2 py-2 w-48 bg-[#FFDEADFF] rounded-md shadow-xl z-20">
+                    <a href="#"
+                       class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-white hover:bg-orange-900 hover:text-white">
+                        Rólunk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+            <img src="img/logo.png" alt="bookportallogo" class="h-20">
+        </div>
+    </div>
+
+    <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="text-md font-bold text-white lg:flex-grow">
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Magyar
+            </a>
+            <a href="#responsive-header"
+               class=" block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Angol
+            </a>
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Német
+            </a>
+        </div>
+        <!-- This is an example component -->
+        <a href="search.html"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+               Keresés
+        </a>
+</nav>
+<div style="background-image: url(img/dark_fantasy.jpg)" class="bg-cover w-full h-full">
+    <div class=" backdrop-blur-sm backdrop-brightness-[45%]">
+        <div class="container mx-auto p-4">
+            <div class="lg:w-3/5 mx-auto pt-28 ">
+                <h2 class="uppercase text-5xl text-center text-white">Dark Fantasy</h2>
+                <p class="text-xl text-white text-center mt-12 mb-16">Fantasy horror elemekkel vegyítve, illetve lazább kategorizálás szerint a sötétebb, negatív hangvételű fantasy műfajok is ide tartoznak. A végkifejlet ritkán pozitív.</p>
+            </div>
+            <div class="">
+                <h3 class="text-white lg:text-5xl text-2xl lg:w-4/5 mx-auto">
+                    Ajánlásaink
+                </h3>
+                <div class="container mx-auto p-4 lg:w-4/5">
+                    <div class="bg-orange-300 bg-opacity-20 p-8 mt-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
+                            <a href="#szoveg7" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/vajak2.jpg" alt="vajak" class="h-96">
+                                    <p class="py-3 text-white">Vaják - The Witcher - Viharidő</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg7">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/vajak2.jpg" alt="vajak">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Vaják - The Witcher - Viharidő</h3>
+                                        <p class="px-2 text-white">Ríviai Geralt, a vaják, egyike azoknak, akik képesek legyőzni az embereket fenyegető szörnyetegeket. Feladatában varázsjelek, főzetek és a vajákok büszkesége segíti - valamint egy acél és egy ezüst kard.
+                                            Amikor egyik megbízatása balul sül el, Geralt elveszíti kardjait. Vissza kell szereznie a különleges fegyvereket, mert boszorkánymesterek szőnek ellene ármányokat, és az egész világban sötét fellegek gyülekeznek.
+                                            Közeleg a vihar...
+
+                                            Andrzej Sapkowski 1948-ban született Lengyelországban. Hazája egyik leghíresebb és legsikeresebb szerzőjének számít. A World Fantasy Életműdíjjal kitüntetett szerző Vaják-sorozatával nemzetközi sikert aratott, könyvei alapján képregények és számítógépes játékok is készültek, 2019-ben pedig a Netflix forgatott belőlük sorozatot Henry Cavill főszereplésével.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg1" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/keseruebredes.jpg" alt="Keserű ébredés  - Tündérkrónikák" class="h-96">
+                                    <p class="py-3 text-white">Keserű ébredés  - Tündérkrónikák</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg1">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/keseruebredes.jpg" alt="Keserű ébredés  - Tündérkrónikák">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Keserű ébredés  - Tündérkrónikák</h3>
+                                        <p class="px-2 text-white">MacKayla Lane Georgiában élő kisvárosi lány. A vihogós csitri egyszeriben komor felnőtté válik, amikor értesül Írországban tanuló nővére, Alina meggyilkolásáról. Mobiltelefonjáról meghallgatja testvére utolsó, kétségbeesett és rejtélyes üzenetét. Dublinba utazik, hogy a számára felfoghatatlan, misztikus nyomokat követve eljusson Alina gyilkosáig, és bosszút álljon rajta. A válaszok keresése közben azonban nemcsak nővére titokzatos életének, szerelmének és halálának részletei tárulnak fel előtte lépésről lépésre, hanem az ír város ódon falak mögötti, láthatatlan árnyékvilága is. Az ijesztő események sodrában rá kell döbbennie, hogy a múlt egymással is könyörtelen harcban álló furcsa fi guráinak mesterkedéseit csakis akkor képes túlélni, ha megtanulja használni újonnan felfedezett adottságát, amelynek révén betekintést nyerhet a tündérek veszedelmekkel teli világába. A veszélyek leküzdésében segítőtársa is akad a kiismerhetetlen könyvesbolt-tulajdonos, Jericho Barrons személyében. A nagy tudású férfi történetei révén érti meg, hogy ha nem sikerül megakadályozni a tündérek és az emberek világát elválasztó falak teljes leomlását, akkor az emberiség jövője reménytelen. Mac fokozatosan tudatára ébred, hogy miféle küldetésre fi gyelmeztette őt Alina abban a bizonyos utolsó üzenetben. Neki kell megtalálnia az ősi Sinsar Dubh-t, a Sötét Könyvet, mert aki először szerzi meg a Tuatha Dé Danaan félelmetes erejű relikviáját, az mindkét világ ura lehet. Mac úgy tervezi, hogy a nyomozás után nyomban visszatér az ő kellemesen provinciális, jelentéktelen kis szülővárosába, és igyekszik elfeledkezni mindenről, ami Dublinban történt vele. Hogy végül mégis a maradás és a további kutatás mellett dönt, abban Jericho Barronsé a főszerep. Kettejük közös próbálkozásának sikeréért azonban már a hamarosan megjelenő folytatás olvasása közben izgulhatunk.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg2" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/legendary.jpg" alt="Legendary" class="h-96">
+                                    <p class="py-3 text-white">Legendary</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg2">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/legendary.jpg" alt="Legendary">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Legendary</h3>
+                                        <p class="px-2 text-white">Donatella Dragna a Caraval varázslatos világában végleg megszabadult zsarnok apjától, és a nővérét, Scarlettet is megmentette egy baljós házasságtól. Lenne mit ünnepelnie a Dragna-lányoknak - de Tella még nem szabad.
+                                            Még a játék előtt, végső kétségbeesésében egyezséget kötött egy bűnözővel, és most olyasmivel tartozik neki, amit eddig soha senki nem tudott megszerezni. Ki kell derítenie a Caraval mester, Legend valódi nevét! Erre csak egyetlenegy esélye van: ha megnyeri a Caravalt.
+                                            Tella tehát második alkalommal is beleveti magát a legendás versengésbe, és ezzel keresztezi egy gyilkos trónörökös útját, belebonyolódik egy elátkozott szerelembe, valamint a titkok kusza hálójába... amivel bajba sodorja Scarlettet is.
+                                            A Caraval mindig is bátorságot, ravaszságot és áldozatokat követelt. Ám ezúttal még többet kér a játék: ha Tella nem tudja teljesíteni, amit az alkuban ígért, és nem szolgáltatja ki Legend igazi nevét, mindent elveszít - talán még az életét is. De ha nyer, Legend meghal, és a Caraval örökre megsemmisül.
+                                            Isten hozott újra a Caravalban... a játék még csak most kezdődik igazán! </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg3" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/tuzesver.jpg" alt="Crescent City - Föld és vér háza" class="h-96">
+                                    <p class="py-3 text-white">Crescent City - Föld és vér háza</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg3">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/tuzesver.jpg" alt="Crescent City - Föld és vér háza">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Crescent City - Föld és vér háza</h3>
+                                        <p class="px-2 text-white">Köti a vér. Kísérti a vágy. <br>
+                                            Szabadjára ereszti a sors. <br>
+                                            <br>
+                                            Bryce Quinlan nappal kemény munkával, éjszakánként pedig bulizással töltött élete egészen addig tökéletes volt, amíg egy démon meg nem gyilkolta a legjobb barátait, magára hagyva őt a veszteségével és a fájdalmával. A tettes rács mögött ül ugyan, a gyilkosságok mégis folytatódnak, és Bryce hirtelen egy nyomozás kellős közepén találja magát. Bármire kész, hogy megbosszulja a barátai halálát.
+                                            <br>
+                                            Hunt Athalar, a hírhedt bukott angyal most kényszerből azokat az arkangyalokat szolgálja, akiket egykor le akart taszítani trónjukról. Brutális képességeit és elképesztő erejét egyetlen ügy szolgálatába állították - meg kell gyilkolnia a főnöke ellenségeit, vitának helye nincs. Amikor démon dúlja fel a városukat, ellenállhatatlan ajánlatot kap: ha segít Bryce-nak megtalálni a gyilkost, karnyújtásnyira kerülhet a szabadsága. Miközben Bryce és Hunt Crescent City legsötétebb részein nyomozva rájön, hogy egy gonosz erő minden egyes, a szívüknek kedves személyt és dolgot halálos veszéllyel fenyeget, arra is rádöbbennek, hogy perzselő szenvedély lakozik a másikban, ami mindkettejüket felszabadíthatja - már ha hagyják.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-28 fa fa-home text-white text-2xl text-center flex">
+                            <a href="index.html" class="uppercase font-sans">Vissza a Főoldalra! </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(".item").on("click", function (e) {
+            e.preventDefault()
+            let href = $(this).attr("href");
+            $(".item-description:not(" + href + ")").hide()
+            $(href).toggle(200);
+            $(href + " form").hide();
+        })
+    });
+</script>
+</body>
+</html>

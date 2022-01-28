@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Életrajzok és Történelem</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <meta name="description" content="Egy ifjú természettudós történetei - Állatkerti gyűjtőutak, Az írásról - Értekezés a mesterségről, Einstein - Egy zseni élete és világa, Wass Albert élete - Töretlen hittel ember és magyar">
+</head>
+<body>
+<nav
+        class="flex items-center justify-between flex-wrap bg-orange-800 py-4 lg:px-12 shadow border-solid border-t-2 border-orange-900">
+    <div class="flex justify-center h-32 lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+        <div class=" pr-8">
+            <div x-data="{ dropdownOpen: false }" class="relative my-12">
+                <button @click="dropdownOpen = !dropdownOpen"
+                        class=" z-10 block rounded-md bg-white p-2 focus:outline-none hover:bg-orange-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute mt-2 py-2 w-48 bg-[#FFDEADFF] rounded-md shadow-xl z-20">
+                    <a href="#"
+                       class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-white hover:bg-orange-900 hover:text-white">
+                        Rólunk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+            <img src="img/logo.png" alt="bookportallogo" class="h-20">
+        </div>
+    </div>
+
+    <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="text-md font-bold text-white lg:flex-grow">
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Magyar
+            </a>
+            <a href="#responsive-header"
+               class=" block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Angol
+            </a>
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Német
+            </a>
+        </div>
+        <!-- This is an example component -->
+        <a href="search.html"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+               Keresés
+        </a>
+</nav>
+<div style="background-image: url(img/biographies&history.jpg)" class="bg-cover w-full h-full">
+    <div class=" backdrop-blur-sm backdrop-brightness-[45%]">
+        <div class="container mx-auto p-4">
+            <div class="lg:w-3/5 mx-auto pt-28 ">
+                <h2 class="uppercase text-5xl text-center text-white">Életrajzok és történelem</h2>
+                <p class="text-xl text-white text-center mt-12 mb-16">Az életrajz a történetírás egyik fontos válfaja.
+                    Általában nem szorítkozik a bemutatott személy életének puszta eseményeire, hanem az egyén
+                    fejlődését, személyiségének alakulását is vizsgálja, ahogyan azt történelmi kora és társadalmi
+                    környezete meghatározta. Az életrajz gyakran részletesen foglalkozik a bemutatott személy tetteinek
+                    okaival, céljával és hatásával. Ezért a többi történeti műfajtól lényegesen különbözik abban, hogy
+                    nem a történelmi események kronologikus sorrendjében halad, hanem az egyént helyezi a középpontba,
+                    és ő életén keresztül mutatja be a kor eseményeit is.</p>
+            </div>
+            <div class="">
+                <h3 class="text-white lg:text-5xl text-2xl lg:w-4/5 mx-auto">
+                    Ajánlásaink
+                </h3>
+                <div class="container mx-auto p-4 lg:w-4/5">
+                    <div class="bg-orange-300 bg-opacity-20 p-8 mt-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
+                            <a href="#szoveg7" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/allatkertigyujtoutak.jpg"
+                                         alt="Egy ifjú természettudós történetei - Állatkerti gyűjtőutak" class="h-96">
+                                    <p class="py-3 text-white">Egy ifjú természettudós történetei - Állatkerti
+                                        gyűjtőutak</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg7">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/allatkertigyujtoutak.jpg"
+                                             alt="Egy ifjú természettudós történetei - Állatkerti gyűjtőutak">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Egy ifjú természettudós történetei -
+                                            Állatkerti gyűjtőutak</h3>
+                                        <p class="px-2 text-white">1954-ben az ifjú David Attenborough-nak káprázatos
+                                            alkalmat kínált az élet: világ körüli útra indulhatott, hogy ritka és
+                                            különleges állatokat gyűjtsön a Londoni Állatkert számára, és minderről
+                                            filmeket készítsen - a BBC új, Állatkerti gyűjtőutak című sorozatát.
+                                            Ez a könyv három ilyen utazás története. Társaival a helybeli őslakosokkal
+                                            együtt kutatott az akkori Brit Guyanában óriáshangyászok, Indonéziában
+                                            komodói sárkányok és Paraguayban tatuk után. Volt dolguk pirájákkal, dühös
+                                            kúszósülökkel és szökésre mindig kész pekarikkal. Megküzdöttek a komisz
+                                            terepviszonyokkal, a kiszámíthatatlan folyókkal, hogy megörökíthessék e
+                                            távoli vidékek hihetetlen szépségeit és mesésen változatos élővilágát.
+                                            Módszereik ma már idejétmúltnak tűnnek, de az állatok, növények, helybeli
+                                            emberek és a környezet iránti csodálatuk és tiszteletük még mindig
+                                            példamutató.
+                                            A szerzőre oly jellemző szellemességgel és bájjal megírt történetek nemcsak
+                                            az emlékezetes kalandokról szólnak, hanem arról az emberről is, aki rajongó
+                                            szeretetet ébresztett bennünk a természet iránt, és lelkesedése azóta is
+                                            töretlen.
+                                            <br>
+                                            Sir David Attenborough (1926) angol természettudós és dokumentumfilmes.
+                                            Immár hét évtizede van a pályán. Természettudományokat tanult Cambridge-ben,
+                                            majd rövid kiadói kitérő után a BBC-nél helyezkedett el. Zoo Quest című,
+                                            legendássá vált televíziós sorozatában átfogó szemlélettel és sokféle
+                                            értelmezéssel mutatta be nézőinek a Föld élővilágát. Legutóbbi alkotása, a
+                                            Planet Earth II minden idők legnézettebb természettudományos
+                                            dokumentumfilm-sorozata.
+                                            Az Egy ifjú természettudós történetei első kiadása magyarul Titokzatos
+                                            állatok nyomában címmel 1993-ban jelent meg. A némileg átdolgozott jelenlegi
+                                            kiadás teljesen új fordítás, a szerző új előszavával és frissített
+                                            képanyaggal.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg1" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/azirasrol.jpg" alt="Az írásról - Értekezés a mesterségről"
+                                         class="h-96">
+                                    <p class="py-3 text-white">Az írásról - Értekezés a mesterségről</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg1">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/azirasrol.jpg" alt="Az írásról - Értekezés a mesterségről">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Az írásról - Értekezés a mesterségről</h3>
+                                        <p class="px-2 text-white">1999-ben bejárta a világsajtót a hír: Stephen Kinget
+                                            elütötte egy kisteherautó, s a népszerű író súlyos, életveszélyes
+                                            sérüléseket szenvedett. Szerencsére - és az olvasók nagy örömére - King
+                                            felépült. Lábadozása idején írta meg, pontosabban fejezte be az 1997-ben
+                                            elkezdett, majd félretett művét, Az írásról-t. King ezúttal nem borzongatni
+                                            akarja kedves és hűséges olvasóit, hanem elmeséli, hogyan vált íróvá, és
+                                            bevezeti őket a szakma rejtelmeibe. A tőle megszokott lendületes stílusban,
+                                            humorral átszőve beszél finoman szólva is hányatott gyerekkoráról - hogyan
+                                            vándoroltak városról városra, mennyit küszködött az édesanyja, hogy
+                                            fenntartsa a családot, gyerekkori csínyekről -, kezdeti nehézségeiről,
+                                            amikor rendre visszautasították az írásait, alkoholproblémáiról, majd a
+                                            Carrie jelentette áttörésről 1974-ben. S innentől kezdve egyenesen ívelt
+                                            felfelé a karrierje, mely mind a mai napig töretlen. Beavatja olvasóit
+                                            műhelytitkaiba, és hol világirodalmi, hol saját elbeszéléséből vett példákon
+                                            keresztül szemlélteti, hogyan zajlik nála az alkotás folyamata - az első,
+                                            nyers változattól a végső formába öntött műig. Mindeközben arra is szakít
+                                            időt, hogy írásra buzdítsa arra hajlamos olvasóit, ellátva őket jó
+                                            tanácsokkal. Stephen King rajongói - új oldaláról ismerve meg kedvenc
+                                            írójukat - ezúttal bepillantást nyerhetnek abba, hogyan is készülnek az
+                                            általuk olyannyira kedvelt, izgalmas, annyi kellemes-borzongató percet
+                                            szerző művek, de a kötet rendkívül szórakoztató lehet bárkinek, akit
+                                            érdekel, hogyan születnek a sikerkönyvek.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg2" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/einstein.jpg" alt="Einstein - Egy zseni élete és világa" class="h-96">
+                                    <p class="py-3 text-white">Einstein - Egy zseni élete és világa</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg2">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/einstein.jpg" alt="Einstein - Egy zseni élete és világa">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Einstein - Egy zseni élete és világa</h3>
+                                        <p class="px-2 text-white">Einsteinről mindenki halott, és mindenki maga elé
+                                            tudja idézni a portréját - mégsem tudjuk igazán, ki is volt ő valójában.
+                                            Walter Isaacson aprólékos kutatómunka eredményeképpen megszületett,
+                                            világszerte nagy sikert aratott életrajzával nem kevesebbre vállalkozott,
+                                            mint hogy megkíséreljen betekintést nyújtani a XX. század talán legnagyobb
+                                            elméjének működésébe, egyúttal közelebbről is megismertesse olvasójával a
+                                            korszakalkotó fizikus mögötti magánembert. Isaacson számos szakirodalmi
+                                            forrást, kortársak visszaemlékezéseit, valamint Einstein saját feljegyzéseit
+                                            és leveleit felhasználva tárja elénk ezt az egyedülálló, kihívásokkal és
+                                            fordulatokkal teli, kalandos életutat.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg3" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/wassalbert.jpg"
+                                         alt="Wass Albert élete - Töretlen hittel ember és magyar" class="h-96">
+                                    <p class="py-3 text-white">Wass Albert élete - Töretlen hittel ember és magyar</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg3">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/wassalbert.jpg"
+                                             alt="Wass Albert élete - Töretlen hittel ember és magyar">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Wass Albert élete - Töretlen hittel ember
+                                            és magyar</h3>
+                                        <p class="px-2 text-white">A 90 éves író élete nagy része országos és nemzetközi
+                                            nyilvánosság előtt zajlott. Elismerések, kitüntetések, dicsérő írások
+                                            ellenére tragikus sors tükröződik a róla írt dokumentumok lapjain. Olvasók
+                                            és kritikusok szeretete mégis napjainkig elkíséri őt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-28 fa fa-home text-white text-2xl text-center flex">
+                            <a href="index.html" class="uppercase font-sans">Vissza a Főoldalra! </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(".item").on("click", function (e) {
+            e.preventDefault()
+            let href = $(this).attr("href");
+            $(".item-description:not(" + href + ")").hide()
+            $(href).toggle(200);
+            $(href + " form").hide();
+        })
+    });
+</script>
+</body>
+</html>

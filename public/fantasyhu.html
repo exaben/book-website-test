@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fantasy</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <meta name="description" content="
+    Vaják, Az utolsó kívánság, A Gyűrűk Ura I-III., Csipkerózsikák, 
+    Trónok harca - A tűz és jég dala">
+</head>
+<body>
+<nav
+        class="flex items-center justify-between flex-wrap bg-orange-800 py-4 lg:px-12 shadow border-solid border-t-2 border-orange-900">
+    <div class="flex justify-center h-32 lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+        <div class=" pr-8">
+            <div x-data="{ dropdownOpen: false }" class="relative my-12">
+                <button @click="dropdownOpen = !dropdownOpen"
+                        class=" z-10 block rounded-md bg-white p-2 focus:outline-none hover:bg-orange-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute mt-2 py-2 w-48 bg-[#FFDEADFF] rounded-md shadow-xl z-20">
+                    <a href="#"
+                       class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-white hover:bg-orange-900 hover:text-white">
+                        Rólunk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+            <img src="img/logo.png" alt="bookportallogo" class="h-20">
+        </div>
+    </div>
+
+    <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="text-md font-bold text-white lg:flex-grow">
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Magyar
+            </a>
+            <a href="#responsive-header"
+               class=" block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Angol
+            </a>
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Német
+            </a>
+        </div>
+        <!-- This is an example component -->
+        <a href="search.html"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+               Keresés
+        </a>
+</nav>
+<div style="background-image: url(img/fantasy.jpg)" class="bg-cover w-full h-full">
+    <div class=" backdrop-blur-sm backdrop-brightness-[45%]">
+        <div class="container mx-auto p-4">
+            <div class="lg:w-3/5 mx-auto pt-28 ">
+                <h2 class="uppercase text-5xl text-center text-white">Fantasy</h2>
+                <p class="text-xl text-white text-center mt-12 mb-16">A Fantasy fő jellemzője, hogy a tartalma többnyire
+                    olyan elképzelt, mitikus jellegű, valamilyen tekintetben mindig irreális, az író által teremtett,
+                    csak annak fantáziájában létező alternatív világokba, mint keretbe van ágyazva, mely felépítésében,
+                    fizikai és etikai törvényeiben, értékeiben, élőlényeiben, rokonságot mutat a vallások és mítoszok
+                    által megteremtett képzeletbeli világokkal.</p>
+            </div>
+            <div class="">
+                <h3 class="text-white lg:text-5xl text-2xl lg:w-4/5 mx-auto">
+                    Ajánlásaink
+                </h3>
+                <div class="container mx-auto p-4 lg:w-4/5">
+                    <div class="bg-orange-300 bg-opacity-20 p-8 mt-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
+                            <a href="#szoveg7" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/vajak.jpg" alt="vajak" class="h-96">
+                                    <p class="py-3 text-white">Vaják, Az utolsó kívánság</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg7">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/vajak.jpg" alt="vajak">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Vaják, Az utolsó kívánság</h3>
+                                        <p class="px-2 text-white">Geralt a vajákok közé tartozik: mágikus képességeinek
+                                            köszönhetően, amelyeket hosszan tartó kiképzése és egy rejtélyes elixír csak
+                                            még tovább csiszolt, zseniális és könyörtelen harcos hírében áll. Ugyanakkor
+                                            nem hétköznapi gyilkos: célpontjai vérszomjas szörnyetegek és aljas
+                                            fenevadak, amelyek mindenütt hatalmas pusztítást végeznek, és megtámadják az
+                                            ártatlanokat.
+                                            Hiába tűnik azonban valami gonosznak vagy jónak, nem biztos, hogy valóban az
+                                            – és minden mesében van egy csipetnyi igazság.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg1" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/gyurukura.jpg" alt="gyűrűk ura" class="h-96">
+                                    <p class="py-3 text-white">A Gyűrűk Ura I-III.</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg1">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/gyurukura.jpg" alt="gyűrűk ura">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">A Gyűrűk Ura I-III.</h3>
+                                        <p class="px-2 text-white">" A Gyűrűk Ura tündérmese. Mégpedig -- legalábbis
+                                            terjedelmét tekintve -- alighanem minden idők legnagyobb tündérmeséje.
+                                            Tolkien képzelete szabadon, ráérősen kalandozik a könyv három vaskos
+                                            kötetében -- vagyis abban a képzelt időben, mikor a világ sorát még nem az
+                                            ember szabta meg, hanem a jót és szépet, a gonoszat és álnokot egyaránt
+                                            ember előtti lények, ősi erők képviselték. Abban az időben, mikor a mi
+                                            időszámításunk előtt ki tudja, hány ezer, tízezer esztendővel a Jó
+                                            kisebbségbe szorult erői szövetségre léptek, hogy a Rossz erőit legyőzzék:
+                                            tündérek, féltündék, az ősi Nyugat-földe erényeit őrző emberek, törpök és
+                                            félszerzetek, erdő öregjei fogtak össze, hogy a jó varázslat eszközével, s a
+                                            nagy mágus, Gandalf vezetésével végül győzelmet arassanak, de épp e győzelem
+                                            következtében elenyésszen az ő idejük, s az árnyak birodalmába áthajózva
+                                            átadják a földet új urának, az emberfajnak.
+
+                                            Különös világ ez az emberfölötti -- vagy emberalatti -- lényekkel
+                                            benépesített Középfölde. Anyagi valósága nincs. Baljós, fekete várai, csodás
+                                            fehér tornyai, fullasztó, sűrű erdei, gyilkos hegyei, sötét mélységei
+                                            gondoskodnak róla, hogy egy pillanatig ne érezzük magunkat a fogható valóság
+                                            közegében. Különös, hisz ebben a mesevilágban, ahol oly ékesen virágoznak a
+                                            lovagi erények, véletlenül sem találkozunk az emelkedett eszményeket hirdető
+                                            kora középkori lovagvilág fonákjával, az eszmények máza alatt a könyörtelen
+                                            társadalmi tagozódással, elnyomással, nyomorral, létbizonytalansággal; ebben
+                                            a külsőre feudálisnak tetsző világban jó is, rossz is vele születik a
+                                            szereplőkkel, ott rejlik a szívük mélyén; a könyv személytelen szereplője a
+                                            morál, az pedig kiben-kiben belső parancs.
+
+                                            <br> Göncz Árpád</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg2" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/csipkerozsikak.jfif" alt="csipkerozsikak" class="h-96">
+                                    <p class="py-3 text-white">Csipkerózsikák</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg2">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/csipkerozsikak.jfif" alt="csipkerozsikak">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Csipkerózsikák</h3>
+                                        <p class="px-2 text-white">Stephen King és Owen King szuperprodukciójában, apa
+                                            és fia közösen írt könyvében a fő kérdés: mi történhet, ha a nők eltűnnek a
+                                            férfiak világából?
+                                            <br class="hidden lg:block"> Valamikor a jövőben (amely olyan valóságos,
+                                            hogy akár napjainkra is felcserélhető lehetne) a nőket elalvás közben
+                                            beburkolja egy ismeretlen fehérjéből képződő hártya, olyan, mint a
+                                            selyemgubó. Ha a Csipkerózsikákként alvó nőket felébesztik, vagy bármi módon
+                                            megsérül a gubójuk, akkor állatiasan vadak és erőszakosak lesznek. Alvás
+                                            közben viszont egy másik, a miénknél jobb világba jutnak, ahol harmónia
+                                            uralkodik, és szinte nincsenek konfliktusok.
+                                            Egy isten háta mögötti helyen, a nyugat-virginiai Dooling női börtönében
+                                            azonban van egyvalaki, egy titokzatos idegen, bizonyos Eve Black, aki
+                                            normális módon elalszik és felébred. De vajon az ő esetében orvosi
+                                            anomáliáról van szó, amit tanulmányozni kellene, hátha megoldást ad erre az
+                                            egész alvásproblémára? Vagy talán Eve Black démon, a megmagyarázhatatlan
+                                            jelenség okozója, és a legjobb lenne megsemmisíteni? A magukra maradt, egyre
+                                            inkább ősi ösztöneikre hallgató férfiak egymással vetélkedő frakciókra
+                                            szakadnak: ki megölni, ki megmenteni akarja Eve-t. Mások a zűrzavart
+                                            kihasználva személyes ellenségeiken állnának bosszút. A csupa férfi világban
+                                            elszabadul a pokol és tombol az erőszak...
+                                            <br class="hidden lg:block">
+                                            "Inkább fantasy ez, nem horror. Bizonyos részei gyilkosak, embereket
+                                            széttépnek, lelőnek és szörnyű módokon meggyilkolnak, de nincs benne
+                                            kísértet, sem ijesztő bohóc." (Owen King)</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg3" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/tronokharca.jfif" alt="tronokharca" class="h-96">
+                                    <p class="py-3 text-white">Trónok harca - A tűz és jég dala</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg3">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/tronokharca.jfif" alt="tronokharca">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Trónok harca - A tűz és jég dala</h3>
+                                        <p class="px-2 text-white">A Trónok harca lebilincselő fantasy, amely klasszikus
+                                            lovagkirályságot tár az olvasó elé: Westeros fölött valaha a sárkánykirályok
+                                            uralkodtak, ám a Targaryen-dinasztiát 15 évvel ezelőtt elűzték, és most
+                                            Robert Baratheon uralkodik hű barátai, Jon Arryn, majd Eddard Stark
+                                            segítségével. A konfliktus középpontjában Deres urai, a Starkok állnak.
+                                            Olyanok, mint a föld, ahol születtek: makacs, kemény jellemű család. Szemünk
+                                            előtt hősök, gazemberek és egy gonosz hatalom története elevenedik meg.
+                                            Ám hamar rá kell ébrednünk, hogy ebben a világban mégsem egyszerűen jók és
+                                            gonoszok kerülnek szembe egymással, hanem mesterien ábrázolt jellemek
+                                            bontakoznak ki előttünk különböző vágyakkal, célokkal, félelmekkel és
+                                            sebekkel.
+                                            Martin legnagyobb erőssége hogy meg tudja újítani, élettel tölti fel azt a
+                                            műfajt, amit a sok populáris Tolkien-imitáció évtizedeken át klisék
+                                            sorozatába fojtva ismételgetett. A jég és tűz dalának első kötete egy
+                                            világteremtő fantasy eposz nagyszabású felütése.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-28 fa fa-home text-white text-2xl text-center flex">
+                            <a href="index.html" class="uppercase font-sans">Vissza a Főoldalra! </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(".item").on("click", function (e) {
+            e.preventDefault()
+            let href = $(this).attr("href");
+            $(".item-description:not(" + href + ")").hide()
+            $(href).toggle(200);
+            $(href + " form").hide();
+        })
+    });
+</script>
+</body>
+</html>

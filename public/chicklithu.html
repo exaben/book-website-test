@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chick Lit</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <meta name="description" content="Edenbrooke, Easy - Egyszeregy, A soha határa, Titok Párizsban">
+</head>
+<body>
+<nav
+        class="flex items-center justify-between flex-wrap bg-orange-800 py-4 lg:px-12 shadow border-solid border-t-2 border-orange-900">
+    <div class="flex justify-center h-32 lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+        <div class=" pr-8">
+            <div x-data="{ dropdownOpen: false }" class="relative my-12">
+                <button @click="dropdownOpen = !dropdownOpen"
+                        class=" z-10 block rounded-md bg-white p-2 focus:outline-none hover:bg-orange-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute mt-2 py-2 w-48 bg-[#FFDEADFF] rounded-md shadow-xl z-20">
+                    <a href="#"
+                       class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-white hover:bg-orange-900 hover:text-white">
+                        Rólunk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+            <img src="img/logo.png" alt="bookportallogo" class="h-20">
+        </div>
+    </div>
+
+    <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="text-md font-bold text-white lg:flex-grow">
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Magyar
+            </a>
+            <a href="#responsive-header"
+               class=" block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Angol
+            </a>
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Német
+            </a>
+        </div>
+        <!-- This is an example component -->
+        <a href="search.html"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+               Keresés
+        </a>
+</nav>
+<div style="background-image: url(img/chick_lit.jpg)" class="bg-cover w-full h-full">
+    <div class=" backdrop-blur-sm backdrop-brightness-[45%]">
+        <div class="container mx-auto p-4">
+            <div class="lg:w-3/5 mx-auto pt-28 ">
+                <h2 class="uppercase text-5xl text-center text-white">Chick Lit</h2>
+                <p class="text-xl text-white text-center mt-12 mb-16">A chicklit vagy chick lit egy modern irodalmi
+                    műfaj, a női lét kérdéseivel foglalkozik szórakoztató, gyakran humoros formában.</p>
+            </div>
+            <div class="">
+                <h3 class="text-white lg:text-5xl text-2xl lg:w-4/5 mx-auto">
+                    Ajánlásaink
+                </h3>
+                <div class="container mx-auto p-4 lg:w-4/5">
+                    <div class="bg-orange-300 bg-opacity-20 p-8 mt-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
+                            <a href="#szoveg7" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/edenbrooke.jpg" alt="Edenbrooke" class="h-96">
+                                    <p class="py-3 text-white">Edenbrooke</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg7">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/edenbrooke.jpg" alt="Edenbrooke">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Edenbrooke</h3>
+                                        <p class="px-2 text-white">Marianne Daventry bármit megtenne, hogy elszökhessen
+                                            a rémesen unalmas Bathból és udvarlója egyre terhesebbé váló ostromai elől.
+                                            Nem csoda hát, hogy amikor ikertestvére, Cecily, meghívja őt Edenbrooke-ba,
+                                            a pazar vidéki birtokra, kapva kap az ajánlaton. Marianne arra számít, hogy
+                                            végre kipihenheti magát és kedvére gyönyörködhet a szeretett angol tájban,
+                                            miközben testvére Edenbrooke jóképű örökösét igyekszik becserkészni. Ám
+                                            idővel rájön, hiába a leggondosabb tervezés, bármikor porszem csúszhat a
+                                            gépezetbe.
+                                            <br class="hidden lg:block"> Marianne, aki először egy útonállóval keveredik
+                                            ijesztő összetűzésbe, majd látszólag ártalmatlan flörtbe bonyolódik,
+                                            képtelen kalandok egész sorát éli át, míg a gyengéd érzelmek és az intrikák
+                                            végleg átveszik az uralmat az élete fölött.
+                                            <br class="hidden lg:block"> Vajon sikerül megzaboláznia csalfa szívét, vagy
+                                            hagyja, hogy egy titokzatos idegen levegye a lábáról? Annyi bizonyos, hogy a
+                                            sors nem egy kellemes nyári vakáció reményében vezeti Marianne-t
+                                            Edenbrooke-ba.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg1" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/easyegyszeregy.jfif" alt="Easy - Egyszeregy" class="h-96">
+                                    <p class="py-3 text-white">Easy - Egyszeregy</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg1">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/easyegyszeregy.jfif" alt="Easy - Egyszeregy">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Easy - Egyszeregy</h3>
+                                        <p class="px-2 text-white">Egy ismeretlen megmentő. <br class="hidden lg:block">
+                                            Egy nyugtalanító titok. <br class="hidden lg:block">
+                                            A szerelem nem mindig sima ügy… <br class="hidden lg:block">
+                                            A fiú figyelte a lányt, de nem ismerte őt. Aztán egy váratlan összecsapás
+                                            jóvoltából a megmentőjévé vált… <br class="hidden lg:block">
+                                            Tagadhatatlan vonzerő hatott közöttük. Ám a múlt, amelyen a fiú kemény
+                                            munkával igyekezett felülkerekedni, és a jövő, amelybe a lány őszinte hitét
+                                            vetette, azzal fenyegetett, hogy elszakítja őket egymástól. Csak együtt
+                                            vehették föl a harcot a fájdalom és a bűntudat ellen, nézhettek szembe az
+                                            igazsággal, és találhattak rá a szerelem nem várt erejére.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg2" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/asohahatara.jfif" alt="A soha határa" class="h-96">
+                                    <p class="py-3 text-white">A soha határa</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg2">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/asohahatara.jfif" alt="A soha határa">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">A soha határa</h3>
+                                        <p class="px-2 text-white">Camryn Bennett még csak húszéves, de azt hiszi,
+                                            pontosan tudja, milyen lesz majd az élete. Ám egy vad éjszaka után az
+                                            észak-karolinai Raleigh legmenőbb belvárosi klubjában ismerősei és önmaga
+                                            elképedésére úgy dönt, otthagyja megszokott életét, és elindul a vakvilágba.
+                                            Egy szál táskával és a mobiltelefonjával felszáll egy távolsági buszra, hogy
+                                            megtalálja önmagát - és helyette rálel Andrew Parrish-re.
+                                            <br class="hidden lg:block">
+                                            A szexi és izgató Andrew úgy éli az életét, mintha nem lenne holnap. Olyan
+                                            dolgokra veszi rá Camrynt, amilyenekre a lány sosem hitte magát képesnek, és
+                                            megmutatja neki, hogyan adja meg magát a legmélyebb, legtiltottabb
+                                            vágyainak. Hamarosan ő lesz Camryn merész új életének központja - olyan
+                                            szerelmet, vágyat és érzelmeket kelt, amilyeneket a lány korábban elképzelni
+                                            sem tudott. De Andrew nem árul el mindent Camrynnak. Ez a titok vajon örökre
+                                            összehozza őket -vagy mindkettőjüket elpusztítja?</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg3" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/titokparizsban.jfif" alt="Titok Párizsban" class="h-96">
+                                    <p class="py-3 text-white">Titok Párizsban</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg3">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/titokparizsban.jfif" alt="Titok Párizsban">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Titok Párizsban</h3>
+                                        <p class="px-2 text-white">Nem kell minden ajtón belesni... <br
+                                                class="hidden lg:block">
+
+                                            A Titok Párizsban intenzív, egy pillanat alatt beszippantja az embert -
+                                            Karen Swan bestsellere a tökéletes kikapcsolódás.
+                                            <br class="hidden lg:block">
+                                            Valahol Párizs macskaköves utcácskái között van egy lakás, amelyben mindent
+                                            ujjnyi vastagon belep a por, és ahol sok évtizeddel ezelőtt
+                                            felbecsülhetetlen értékű műlkotásokat rejtettek el.
+                                            <br class="hidden lg:block">
+                                            Flora nem akármilyen galériás: az egyik legmenőbb Londonban - jobban el
+                                            tudja engedni magát egy árverésen, ahol csak úgy röpködnek a fontmilliók,
+                                            mint édeskettesben, egy gyertyafényes vacsora alkalmával.
+                                            <br class="hidden lg:block">
+                                            Florára esik a választás, hogy becsülje fel a párizsi lakásból előkerült
+                                            műkincseket. Igazi profiként deríti fel minden egyes festmény sorsát és
+                                            előéletét, és ki akarja nyomozni, kicsoda rejtegette az alkotásokat ilyen
+                                            sokáig.
+                                            <br class="hidden lg:block">
+                                            Ahogy felveszi a kapcsolatot a fényűzően gazdag Vermeil családdal, akik
+                                            Párizs és az Antibes-szigetek között ingáznak, Flora rádöbben, hogy a
+                                            látszat sok tekintetben csal. A nyers modorú Xavier Vermeil eltökélte, hogy
+                                            mindenáron távol tartja Florát családi titkaiktól - vajon mit rejteget?</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-28 fa fa-home text-white text-2xl text-center flex">
+                            <a href="index.html" class="uppercase font-sans">Vissza a Főoldalra! </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(".item").on("click", function (e) {
+            e.preventDefault()
+            let href = $(this).attr("href");
+            $(".item-description:not(" + href + ")").hide()
+            $(href).toggle(200);
+            $(href + " form").hide();
+        })
+    });
+</script>
+</body>
+</html>

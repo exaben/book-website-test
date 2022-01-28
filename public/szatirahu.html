@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Szatíra</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <meta name="description" content="Állatfarm, Addig se iszik, Nézd, ki van itt, Gulliver történetei">
+</head>
+<body>
+<nav
+        class="flex items-center justify-between flex-wrap bg-orange-800 py-4 lg:px-12 shadow border-solid border-t-2 border-orange-900">
+    <div class="flex justify-center h-32 lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+        <div class=" pr-8">
+            <div x-data="{ dropdownOpen: false }" class="relative my-12">
+                <button @click="dropdownOpen = !dropdownOpen"
+                        class=" z-10 block rounded-md bg-white p-2 focus:outline-none hover:bg-orange-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute mt-2 py-2 w-48 bg-[#FFDEADFF] rounded-md shadow-xl z-20">
+                    <a href="rolunkhu.html"
+                       class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-white hover:bg-orange-900 hover:text-white">
+                        Rólunk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+            <img src="img/logo.png" alt="bookportallogo" class="h-20">
+        </div>
+    </div>
+
+    <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="text-md font-bold text-white lg:flex-grow">
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Magyar
+            </a>
+            <a href="#responsive-header"
+               class=" block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Angol
+            </a>
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Német
+            </a>
+        </div>
+        <!-- This is an example component -->
+        <a href="search.html"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+               Keresés
+        </a>
+</nav>
+<div style="background-image: url(img/Szatira.jpg)" class="bg-cover w-full h-full">
+    <div class=" backdrop-blur-sm backdrop-brightness-[45%]">
+        <div class="container mx-auto p-4">
+            <div class="lg:w-3/5 mx-auto pt-28 ">
+                <h2 class="uppercase text-5xl text-center text-white">Szatíra</h2>
+                <p class="text-xl text-white text-center mt-12 mb-16">Jellemzője, hogy a valóság komikus-ironikus
+                    ábrázolására törekszik. Ábrázolási módszerei között szerepel az arányok megváltoztatása, a
+                    kicsinyítés, a nagyítás, a túlzás.</p>
+            </div>
+            <div class="">
+                <h3 class="text-white lg:text-5xl text-2xl lg:w-4/5 mx-auto">
+                    Ajánlásaink
+                </h3>
+                <div class="container mx-auto p-4 lg:w-4/5">
+                    <div class="bg-orange-300 bg-opacity-20 p-8 mt-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
+                            <a href="#szoveg7" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/allatfarm.jpg" alt="Állatfarm" class="h-96">
+                                    <p class="py-3 text-white">Állatfarm</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg7">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/allatfarm.jpg" alt="Állatfarm">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Állatfarm</h3>
+                                        <p class="px-2 text-white">Az Állatfarm George Orwell ellenállhatatlanul
+                                            ötletes, szellemes és mulatságos szatírája. Látszólag olyan állatokról szól,
+                                            akik elűzik annak a farmnak a tulajdonosát, ahol élnek, így felszabadítva
+                                            magukat az ember zsarnoki uralma alól. Ezután maguk vezetik a gazdaságot,
+                                            önkormányzatot hoznak létre, és általános egyenlőségre törekszenek. A
+                                            választásokon a sertések győznek, akik azonban hamarosan kijátsszák az
+                                            egyenlőség szabályait, és ugyanolyan zsarnokokká válnak, mint korábban az
+                                            ember volt. A helyzet a farmon ismét ugyanaz, mint a "forradalom" előtt,
+                                            csak most demagóg szövegek hirdetik: "itt minden az állatokért van!"
+                                            Az Állatfarm valójában a sztálini Szovjetunió allegóriája. Orwell a történet
+                                            fontos eseményeit a sztálini rendszer "vívmányaiból" kölcsönözte, és
+                                            szereplői is mind a Szovjetunió történelmére utalnak. Ahogyan a mű mottója
+                                            is: "Minden állat egyenlő, de egyes állatok egyenlőbbek a többinél."</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg1" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/addigseiszik.jpg  " alt="Addig se iszik" class="h-96">
+                                    <p class="py-3 text-white">Addig se iszik</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg1">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/addigseiszik.jpg  " alt="Addig se iszik">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Addig se iszik</h3>
+                                        <p class="px-2 text-white">"Mikor a szerzőt megismertem, még nagyképűen
+                                            vallotta: "Hárman nem írunk: Szókratész, Jézus és én." Aztán megtört, és
+                                            írni kezdett, paródiákat, persze - és megállt a kanál a levesben, de úgy,
+                                            hogy a fal adta másikat. Úgy vágytunk erre a hangra ebben a karót nyelt,
+                                            szürke, humordeficites honi literatúrában, mint egy falat kenyérre. Bödőcs
+                                            írásaiban a páratlan irodalmi műveltség találkozik az igazi humorral
+                                            Karinthy boncasztalán. Apját kérdezték, mit szól, hogy fia már ír is. "Addig
+                                            se iszik" - válaszolta a bölcs öreg, és igaza volt: Tibor írás közben sose
+                                            iszik. (Hmm...) Mert ilyen az irodalom: nevel, tanít, szórakoztat - és amíg
+                                            írunk vagy olvasunk, addig se iszunk. Tisztelet a kivételnek. Fogadják tehát
+                                            szeretettel az irodalmi paródia Lemmyjét, a magyar humor Billy, a Kölyökjét,
+                                            a búcsúszentlászlói Rabelais-t. "Tessék mosolyogni!" "
+                                            <br>Cserna-Szabó András</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg2" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/nezdkivanitt.jpg" alt="Nézd, ki van itt" class="h-96">
+                                    <p class="py-3 text-white">Nézd, ki van itt</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg2">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/nezdkivanitt.jpg" alt="Nézd, ki van itt">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Nézd, ki van itt</h3>
+                                        <p class="px-2 text-white">2011. nyara. Berlin közepén egy üres telken, katonai
+                                            egyenruhában egy ötvenhat esztendős férfi ébredezik: Adolf Hitler. Amit
+                                            talál: béke, demokrácia, rengeteg külföldi és egy női kancellár... Ebben az
+                                            új világban a tőle elvárható fanatikus hittel új karrierbe kezd - a
+                                            televízióban.Timur Vermes káprázatos szatírájának Hitlere nemcsak végtelenül
+                                            komikus figura, de ijesztően valóságos is. Meghűl az ereinkben a vér, hogy
+                                            milyen könnyen megtalálja a helyét egy cinikus, gátlástalan világban, ahol a
+                                            demokrácia hosszú évtizedei után a demagógia, a nézettségi adatok és a
+                                            like-gombok nyomogatása vezérli a közéleti cselekvést. A könyv a megjelenése
+                                            óta töretlen sikert arat Németországban, olvasók százezreit bűvölte el, és a
+                                            világon szinte mindenütt az idei év egyik legjobban várt megjelenéseként
+                                            beszélnek róla. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg3" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/gulliver.jpg" alt="Gulliver történetei" class="h-96">
+                                    <p class="py-3 text-white">Gulliver történetei</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg3">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/gulliver.jpg" alt="Gulliver történetei">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Gulliver történetei</h3>
+                                        <p class="px-2 text-white">Gulliver összes története az angol és a magyar nyelvű
+                                            irónia nagymestereinek tollából első ízben egy kötetben!
+                                            <br> Három önálló, egymással mégis szorosan összefüggő regényt adunk közre:
+                                            Jonathan Swift: Gulliver utazásai, Karinthy Frigyes: Utazás Faremidóba;
+                                            Capillária.
+                                            <br> A művek mindegyike számtalan kiadást megért már a legkülönbözőbb
+                                            variációkban, eddig azonban még sohasem jelentek meg egy kötetben. Karinthy,
+                                            miután lefordította Swift könyvét, az abban szereplő négy út mellé megírta
+                                            az ötödik, majd a hatodik részt. Az eredeti nyolc helyszín - Liliput,
+                                            Brobdingnag, Laputa, Balnibarbi, Luggnagg, Glubbdubdrib, Japán és
+                                            Hauhnhnmország - így egészült ki Faremidó és Capillária
+                                            tudományos-fantasztikus igényű leírásával. Az akár hosszú-hosszú évekig
+                                            tartó utazások végén, bár rengeteg egzotikus tájat, élővilágot, politikai és
+                                            társadalmi berendezkedést, valamint a legváltozatosabb fantázialényeket
+                                            ismerheti meg az ideálisnál nemegyszer jóval közelebbről, a kalandor mégis
+                                            mindig megtér hazájába és családjához.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-28 fa fa-home text-white text-2xl text-center flex">
+                            <a href="index.html" class="uppercase font-sans">Vissza a Főoldalra! </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(".item").on("click", function (e) {
+            e.preventDefault()
+            let href = $(this).attr("href");
+            $(".item-description:not(" + href + ")").hide()
+            $(href).toggle(200);
+            $(href + " form").hide();
+        })
+    });
+</script>
+</body>
+</html>

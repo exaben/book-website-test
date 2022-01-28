@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Novella</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <meta name="description" content="Nincs, és ne is legyen, Egy fiatal orvos feljegyzései, 
+    Bizarr történetek, Erdély magyar föld - Kötetben meg nem jelent írások 1925-1945">
+</head>
+<body>
+<nav
+        class="flex items-center justify-between flex-wrap bg-orange-800 py-4 lg:px-12 shadow border-solid border-t-2 border-orange-900">
+    <div class="flex justify-center h-32 lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+        <div class=" pr-8">
+            <div x-data="{ dropdownOpen: false }" class="relative my-12">
+                <button @click="dropdownOpen = !dropdownOpen"
+                        class=" z-10 block rounded-md bg-white p-2 focus:outline-none hover:bg-orange-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute mt-2 py-2 w-48 bg-[#FFDEADFF] rounded-md shadow-xl z-20">
+                    <a href="rolunkhu.html"
+                       class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-white hover:bg-orange-900 hover:text-white">
+                        Rólunk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+            <img src="img/logo.png" alt="bookportallogo" class="h-20">
+        </div>
+    </div>
+
+    <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="text-md font-bold text-white lg:flex-grow">
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Magyar
+            </a>
+            <a href="#responsive-header"
+               class=" block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Angol
+            </a>
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Német
+            </a>
+        </div>
+        <!-- This is an example component -->
+        <a href="search.html"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+               Keresés
+        </a>
+</nav>
+<div style="background-image: url(img/Novella.jpg)" class="bg-cover w-full h-full">
+    <div class=" backdrop-blur-sm backdrop-brightness-[45%]">
+        <div class="container mx-auto p-4">
+            <div class="lg:w-3/5 mx-auto pt-28 ">
+                <h2 class="uppercase text-5xl text-center text-white">Novella</h2>
+                <p class="text-xl text-white text-center mt-12 mb-16">A novella a szépirodalomhoz tartozó kisepikai
+                    műfaj. Általában egy szálon fut, és egyetlen sorsfordulat köré épül. Legtöbbször kevés szereplő
+                    jelenik meg benne. Lezárására jellemző a csattanó.</p>
+            </div>
+            <div class="">
+                <h3 class="text-white lg:text-5xl text-2xl lg:w-4/5 mx-auto">
+                    Ajánlásaink
+                </h3>
+                <div class="container mx-auto p-4 lg:w-4/5">
+                    <div class="bg-orange-300 bg-opacity-20 p-8 mt-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
+                            <a href="#szoveg7" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/nincsesneislegyen.jpg" alt="Nincs, és ne is legyen" class="h-96">
+                                    <p class="py-3 text-white">Nincs, és ne is legyen</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg7">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/nincsesneislegyen.jpg" alt="Nincs, és ne is legyen">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Nincs, és ne is legyen</h3>
+                                        <p class="px-2 text-white">Szvoren Edina a kortárs magyar irodalom legjobb
+                                            novellistája: fanyar és tűpontos megjegyzései felejthetetlen mondatokkal
+                                            mutatják meg és rejtik el titokzatos emberi kapcsolatainkat. Szvoren Edina
+                                            második kötete 2012-ben jelent meg először, és kapta meg az Európai Unió
+                                            Irodalmi Díját. Újrakiadásával most válik teljessé a Magvető gondozásában a
+                                            szerző eddig megjelent könyveinek gyűjteménye. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg1" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/egyfiatalorvosfeljegyzesei.jpg" alt="Egy fiatal orvos feljegyzései"
+                                         class="h-96">
+                                    <p class="py-3 text-white">Egy fiatal orvos feljegyzései</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg1">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/egyfiatalorvosfeljegyzesei.jpg"
+                                             alt="Egy fiatal orvos feljegyzései">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Egy fiatal orvos feljegyzései</h3>
+                                        <p class="px-2 text-white">Egy fiatal orvos a tanulmányai után vidékre kerül,
+                                            ahol rettegve állapítja meg, hogy az elméleti és a gyakorlati tudás között
+                                            hatalmas a különbség. Az isten háta mögötti kórházban a szülés közben
+                                            fellépő komplikációktól a gégemetszésig, a foghúzástól az amputálásig bármi
+                                            előfordulhat, neki pedig úgy kell helytállnia, hogy se a kollégái, se a
+                                            betegei ne vegyék észre, mennyire bizonytalan. Mindennapjait bizalmatlan és
+                                            túl bizakodó parasztok, az utasításaira fittyet hányó páciensek és a
+                                            legkülönfélébb kórságok népesítik be. Bulgakov orvosi témájú novelláit és
+                                            három hosszabb elbeszélését olvasva együtt izgulhatunk, vajon sikerül-e
+                                            hősének megmentenie a gondjaira bízott felnőtteket és gyerekeket, és
+                                            elbánik-e az orosz téllel meg a pusztában felbukkanó farkasokkal.
+                                            Az orosz írózseni felejthetetlen novellái most Kiss Ilona új fordításában
+                                            jelennek meg. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg2" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/csipkerozsikak.jfif" alt="Bizarr történetek" class="h-96">
+                                    <p class="py-3 text-white">Bizarr történetek</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg2">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/csipkerozsikak.jfif" alt="Bizarr történetek">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Bizarr történetek</h3>
+                                        <p class="px-2 text-white">"Éjszakánként szinte akaratom ellenére más, még
+                                            tarkább ösvényekre vitt az internet - felvonultatta előttem a szentek,
+                                            vagyis inkább földi maradványaik halál utáni sorsát, az ujjak, bokák,
+                                            hajfürtök, a testből kivágott szívek, lenyisszantott fejek imádatát. (...)
+                                            És a szent testek elrablását, a halottak felosztását, a csodásan
+                                            megsokszorozódó szíveket, kezeket, sőt, a Kisjézus fitymáit (sacrum
+                                            preputium). Egy aukciós oldal archív ajánlatai között szentek testének
+                                            darabkái szerepeltek. Az első megjelenített találat Kapisztrán János
+                                            ereklyetartója volt a belezárt ereklyével együtt - 680 złotyért kínálták az
+                                            Allegro honlapon."
+                                            <br> Petneki Noémi fordítása
+                                            <br class="hidden lg:block"><br class="hidden lg:block">
+                                            Olga Tokarczuk a kortárs lengyel irodalom egyik legnagyobb alakja. Az
+                                            1962-ben született írónő pszichoterapeutaként kezdte pályáját. A kilencvenes
+                                            évektől jelennek meg szépirodalmi írásai, amelyek sorra nyerik el a
+                                            legrangosabb lengyel és nemzetközi irodalmi díjakat.
+                                            <br class="hidden lg:block"><br class="hidden lg:block">
+                                            A 2018-ban megjelent Bizarr történetek novellái szürreális elemekben
+                                            bővelkedő, többnyire nyugtalanító írások, amelyekben felbukkan Tokarczuk
+                                            megannyi fontos témája, a lét nagy kérdései, az ember és a természet
+                                            viszonya és a nemiség. </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg3" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/erdelymagyarfoldwassalbert.jpg"
+                                         alt="Erdély magyar föld - Kötetben meg nem jelent írások 1925-1945"
+                                         class="h-96">
+                                    <p class="py-3 text-white">Erdély magyar föld - Kötetben meg nem jelent írások
+                                        1925-1945</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg3">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/erdelymagyarfoldwassalbert.jpg"
+                                             alt="Erdély magyar föld - Kötetben meg nem jelent írások 1925-1945">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Erdély magyar föld - Kötetben meg nem
+                                            jelent írások 1925-1945</h3>
+                                        <p class="px-2 text-white">Kétszeresen is irodalmi szenzáció a kötetben
+                                            kiadatlan Wass Albert-írások publikálása: egyrészt a két világháború közötti
+                                            időszak lenyomata, szám szerint mintegy félszáz darab, másrészről pedig a
+                                            jelen kötet az életműsorozat új kiadásának nyitódarabja, hiszen a revideált,
+                                            az első közlésekkel és gépiratokkal összevetett, valamint újrafordított
+                                            kötetek kiadása hiánypótló (de el nem késett) vállalkozás a hányatott sorsú
+                                            kiadások zavaros évtizedei után.
+                                            Wass Albert számtalan lapban publikált a Nimródtól a kolozsvári Ellenzéken
+                                            át az Erdélyi Gazdáig, korai versei a Vadász Újságban, az aradi Vasárnapban
+                                            vagy éppenséggel a Debreceni Újságban jelentek meg a húszas évek derekától.
+                                            Az írói sikerkorszak a harmincas évektől köszöntött be, ismert írásainak
+                                            részleteit (Jönnek!, A titokzatos őzbak) például lapoknak is elküldte más és
+                                            más címekkel. A jelen kötet ezekből is közöl fejezeteket, ahogy a
+                                            Debrecenben írt levelekből, egészen a háborús időszak passióiig (Levél a
+                                            Pusztulás Földjéről). A köztük lévő ív pedig a tündérország Erdély: a
+                                            Mezőség, Kolozsvár, Marosvásárhely, a Kelemen-havasok, Istenszéke, Ratosnya
+                                            vidéke: mintha csak A funtineli boszorkány helyszínein látogatnánk végig.
+                                            Vagy a magyar múlt fejezetein, például így a Koppány haláláról szóló
+                                            novellában: Nyugat felől hideg szél zuhant lefelé a lankán és éles-karmosan
+                                            rohanta meg a sátort. Vijjogva ostorozta a fákat, a rónán horkanva
+                                            bokrosodtak tőle a kipányvázott lovak, s remegő orrcimpákkal kémleltek
+                                            nyugatnak. Sűrű vérében magába roskadva omlott alá a megnehezült nap, és
+                                            kínjában pozdorjává tépett párákkal dobálta tele az eget. Farkasok
+                                            vonyítottak azon az estén, szerte a somogyi mocsarak között, és az erdők
+                                            rejtett tisztásain csapatba verődve csörtetett a megriadt nemesvad. Napok
+                                            óta nehéz viharok szagát hordozták a szelek, napok óta véresen borult le az
+                                            este, és rémült csillagok nyugtalan tűzcsóvái izzották tele az éjszakákat.
+                                            Messze országokban lakozó bölcsek és jövendőmondók roppant furcsa
+                                            csillagokat láttak jönni és szétomolni Pannónia fölött, és mindazok, kik ezt
+                                            a pompás tűzijátékot nézték, egy nagyszerű nép pusztulásáról regéltek a
+                                            tanítványaiknak.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-28 fa fa-home text-white text-2xl text-center flex">
+                            <a href="index.html" class="uppercase font-sans">Vissza a Főoldalra! </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(".item").on("click", function (e) {
+            e.preventDefault()
+            let href = $(this).attr("href");
+            $(".item-description:not(" + href + ")").hide()
+            $(href).toggle(200);
+            $(href + " form").hide();
+        })
+    });
+</script>
+</body>
+</html>

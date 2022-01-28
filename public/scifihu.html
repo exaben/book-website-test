@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Sci-fi</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="fontawesome-free-6.0.0-beta3-web/css/all.min.css">
+    <meta name="description" content="Dűne, Az Alapítvány pereme, S.T.A.L.K.E.R. - A Minótaurosz Projekt, Metró - A trilógia">
+</head>
+<body>
+<nav
+        class="flex items-center justify-between flex-wrap bg-orange-800 py-4 lg:px-12 shadow border-solid border-t-2 border-orange-900">
+    <div class="flex justify-center h-32 lg:w-auto w-full lg:border-b-0 pl-6 pr-2 border-solid border-b-2 border-gray-300 pb-5 lg:pb-0">
+        <div class=" pr-8">
+            <div x-data="{ dropdownOpen: false }" class="relative my-12">
+                <button @click="dropdownOpen = !dropdownOpen"
+                        class=" z-10 block rounded-md bg-white p-2 focus:outline-none hover:bg-orange-900">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                        <path fill-rule="evenodd"
+                              d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                              clip-rule="evenodd"/>
+                    </svg>
+                </button>
+
+                <div x-show="dropdownOpen" @click="dropdownOpen = false" class="fixed inset-0 h-full w-full z-10"></div>
+
+                <div x-show="dropdownOpen" class="absolute mt-2 py-2 w-48 bg-[#FFDEADFF] rounded-md shadow-xl z-20">
+                    <a href="rolunkhu.html"
+                       class="block px-4 py-2 text-sm capitalize text-gray-700 hover:text-white hover:bg-orange-900 hover:text-white">
+                        Rólunk
+                    </a>
+                </div>
+            </div>
+
+        </div>
+        <div class="flex items-center flex-shrink-0 text-gray-800 mr-16">
+            <img src="img/logo.png" alt="bookportallogo" class="h-20">
+        </div>
+    </div>
+
+    <div class="menu w-full lg:block flex-grow lg:flex lg:items-center lg:w-auto lg:px-3 px-8">
+        <div class="text-md font-bold text-white lg:flex-grow">
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Magyar
+            </a>
+            <a href="#responsive-header"
+               class=" block uppercase mt-4 lg:inline-block lg:mt-0 border-r-2 border-white lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Angol
+            </a>
+            <a href="#responsive-header"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+                Német
+            </a>
+        </div>
+        <!-- This is an example component -->
+        <a href="search.html"
+               class="block uppercase mt-4 lg:inline-block lg:mt-0 lg:text-3xl hover:text-white px-4 py-2 rounded hover:bg-orange-900 mr-2">
+               Keresés
+        </a>
+</nav>
+<div style="background-image: url(img/Sci-fi.jpg)" class="bg-cover w-full h-full">
+    <div class=" backdrop-blur-sm backdrop-brightness-[45%]">
+        <div class="container mx-auto p-4">
+            <div class="lg:w-3/5 mx-auto pt-28 ">
+                <h2 class="uppercase text-5xl text-center text-white">Sci-fi</h2>
+                <p class="text-xl text-white text-center mt-12 mb-16">A sci-fi az angol science fiction kifejezés.
+                    Jelentése: tudományos-fantasztikus. A tudományos-fantasztikus mű olyan irodalmi alkotás, mely
+                    legtöbbször valódi vagy képzeletbeli tudományoknak a társadalomra, vagy egyes egyénekre gyakorolt
+                    hatását mutatja be. Ezeknek a műveknek a közös jellemzői, hogy zömében egy lehetséges jövőben
+                    játszódó képzeletbeli történetek.</p>
+            </div>
+            <div class="">
+                <h3 class="text-white lg:text-5xl text-2xl lg:w-4/5 mx-auto">
+                    Ajánlásaink
+                </h3>
+                <div class="container mx-auto p-4 lg:w-4/5">
+                    <div class="bg-orange-300 bg-opacity-20 p-8 mt-12">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8 w-full">
+                            <a href="#szoveg7" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/dune.jpg" alt="Dűne" class="h-96">
+                                    <p class="py-3 text-white">Dűne</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg7">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/dune.jpg" alt="Dűne">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Dűne</h3>
+                                        <p class="px-2 text-white">A távoli jövőben az emberiség számtalan bolygót
+                                            meghódított, ám mind közül a legveszélyesebb, a sivatagos Dűne egyben a
+                                            legértékesebb is. Csak itt található meg az a különleges anyag, a fűszer,
+                                            ami lehetővé teszi a fénynél gyorsabb űrutazást és meghosszabbítja az emberi
+                                            életet. A fiatal Paul Atreides és családja a bolygók fölött uralkodó Császár
+                                            parancsára érkezik a Dűnére, hogy átvegye annak irányítását ellenségüktől, a
+                                            Harkonnenektől. Ám mind Paul apja, Leto herceg, mind pedig hűséges segítőik
+                                            tudják: halálos kelepcébe sétálnak, ahol minden képességükre szükségük lesz,
+                                            hogy megmeneküljenek.
+                                            <br class="hidden lg:block"><br class="hidden lg:block">
+                                            Frank Herbert klasszikus regényét 1965-ös megjelenése óta a legfontosabb
+                                            sci-fi műnek tartják, ami nélkül nem létezhetnének olyan nagyszabású filmek
+                                            sem, mint a Star Wars. Az elmúlt évtizedekben sokan próbálták már
+                                            megfilmesíteni a Dűne árulással és misztikummal teli történetét, Herbert
+                                            pedig öt további folytatást írt az eredeti regényhez. Most korunk egyik
+                                            legizgalmasabb rendezője, Denis Villeneuve (Érkezés, Szárnyas fejvadász
+                                            2049) készített látványos adaptációt.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg1" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/alapitvanypereme.jpg" alt="Az Alapítvány pereme" class="h-96">
+                                    <p class="py-3 text-white">Az Alapítvány pereme</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg1">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/alapitvanypereme.jpg" alt="Az Alapítvány pereme">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Az Alapítvány pereme</h3>
+                                        <p class="px-2 text-white">Hari Seldon ötszáz évvel ezelőtt indította el a
+                                            tervét, amelynek célja a Galaktikus Birodalom összeomlását követő káosz és
+                                            anarchia idejének lerövidítése. A galaxis szélén létrehozott Alapítvány
+                                            lakóinak számára úgy tűnik, a terv zökkenőmentesen halad, azonban egy fiatal
+                                            tanácsos, Golan Trevize szerint valójában a háttérben még mindig a régen
+                                            eltöröltnek hitt Második Alapítvány mozgatja a szálakat. Titkos küldetésre
+                                            indul hát, amelyen kéretlen útitársat is kap a mítoszokba vesző
+                                            eredetbolygót, a Földet kutató Janov Pelorat személyében. Ám talán nem a
+                                            Második Alapítvány az egyetlen csoport, amely titokban próbálja befolyásolni
+                                            az emberiség sorsát.
+                                            <br class="hidden lg:block"><br class="hidden lg:block">
+                                            Isaac Asimov három évtizeddel az eredeti Alapítvány-regények megírása után
+                                            tért vissza legkedveltebb történetfolyamához, hogy tovább vezesse az
+                                            olvasókat a távoli jövő eseményein, közben feltárva az emberek és
+                                            civilizációk működésének alapelveit.</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg2" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/stalker.jpg" alt="S.T.A.L.K.E.R. - A Minótaurosz Projekt"
+                                         class="h-96">
+                                    <p class="py-3 text-white">S.T.A.L.K.E.R. - A Minótaurosz Projekt</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg2">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/stalker.jpg" alt="S.T.A.L.K.E.R. - A Minótaurosz Projekt">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">S.T.A.L.K.E.R. - A Minótaurosz
+                                            Projekt</h3>
+                                        <p class="px-2 text-white">Színész, a stalker és Szuvenír, az odaveszett osztag
+                                            parancsnoka képtelenek elfogadni bajtársaik halálát. Nem tudnak belenyugodni
+                                            abba, hogy a titokzatos N-23-as laboratóriumkomplexum, melyben a barátaik
+                                            végzetéhez vezető kísérleteket folytatták, még mindig létezik, és szörnyű
+                                            veszélyt jelent mind a Zóna, mind az azon kívüli világ lakóira. Kutatásaikat
+                                            sokáig nem koronázza siker, mígnem egyszer csak tudomást szereznek a
+                                            Minótaurosz Projektről. Ki kell deríteniük, tulajdonképpen mi is ez, és
+                                            hogyan kapcsolódik a keresett laborhoz.
+                                            <br class="hidden lg:block"><br class="hidden lg:block">
+                                            Kalandos és életveszélyes "kirándulás" veszi kezdetét a Zónába. A két
+                                            bajtárs sebesülten, félholtan sem adja fel, kitartanak a végsőkig, hogy akár
+                                            életük árán is elérjék a kitűzött célt: megsemmisíteni a kártékony labort.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <a href="#szoveg3" class="hover:scale-110 transition-transform text-center item">
+                                <div class="">
+                                    <img src="img/metrotrilogia.jpg" alt="Metró - A trilógia" class="h-96">
+                                    <p class="py-3 text-white">Metró - A trilógia</p>
+                                </div>
+                            </a>
+                            <div class="lg:row-start-2 hidden lg:col-span-4 item-description" id="szoveg3">
+                                <div class="flex flex-col lg:flex-row gap-6">
+                                    <div class="lg:w-1/3 hidden lg:block">
+                                        <img src="img/metrotrilogia.jpg" alt="Metró - A trilógia">
+                                    </div>
+                                    <div class="lg:w-2/3 text-left">
+                                        <h3 class="text-4xl mb-16 text-white">Metró - A trilógia</h3>
+                                        <p class="px-2 text-white">Az egész világ romokban hever. <br>
+                                            Moszkva szellemvárossá változott, megmérgezte a radioaktív sugárzás, és
+                                            szörnyek népesítik be. A kevés életben maradt ember a moszkvai metróban
+                                            bújik meg - a föld legnagyobb atombombabiztos óvóhelyén. Az alagutakban
+                                            sötétség honol és borzalom fészkel.
+                                            <br> Artyomnak az egész metróhálózaton át kell jutnia, hogy megmentse a
+                                            szörnyű veszedelemtől az állomását, sőt talán az egész emberiséget. De
+                                            hogyan tudja majd eldönteni, hogy hőstettet követ-e el vagy óriási hibát?
+                                            <br class="hidden lg:block"><br class="hidden lg:block">
+                                            Glukhovsky története az atomháború utáni világot írja le, de valójában
+                                            nagyon is a mostani világunkról szól: hidegháborúról, menekültválságról, új
+                                            diktatúrákról...
+                                            <br class="hidden lg:block"><br class="hidden lg:block">
+                                            A Metró három része a világ számos országában bestseller lett, és népszerű
+                                            számítógépes játékok is készültek belőle. Most először jelenik meg a
+                                            trilógia - melyet a szerző 2019-ben kiegészített egy új fejezettel - egy
+                                            kötetben.</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="pt-28 fa fa-home text-white text-2xl text-center flex">
+                            <a href="index.html" class="uppercase font-sans">Vissza a Főoldalra! </a>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script>
+    $(document).ready(function () {
+        $(".item").on("click", function (e) {
+            e.preventDefault()
+            let href = $(this).attr("href");
+            $(".item-description:not(" + href + ")").hide()
+            $(href).toggle(200);
+            $(href + " form").hide();
+        })
+    });
+</script>
+</body>
+</html>
